@@ -1,288 +1,336 @@
-body{
-  margin:auto;
-  width: 1500px;
-  position: relative;
-  overflow-x: hidden;
-}
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        /* Add style to the page */
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            margin: 40px;
+        }
 
-/*HEADER*/
+        /* Style the header */
+        .header {
+            padding: 1px;
+            background-color: white;
+        }
 
-header{
-  display:flex;
-  flex-direction:column;
-  justify-content: start;
-  align-content: center;
-  margin: auto;
-  background-color: white; 
+        /* Style the logo */
+        .logo {
+            width: 280px;
+            height: 170px;
+            float: left;
+        }
 
-}
-.p0{
-  font-family:'Sans serif';
-  font-size: 16px;
-  font-weight: medium;
-  margin-left: 140px;
-  color: rgb(203,161,53);
-}
-p{
-  font-family:'Open Sans';
-  font-size: 18px;
-  font-weight: normal;
-  color: rgb(0,0,0);
-  margin-left: 30px;
-  width:500px;
+        /* Style the navigation bar */
+        .navbar {
+            overflow: visible;
+            background-color: #0E4D92;
+        }
 
-}
-.top{
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: start;
-  height: 30px;
-  background-color: rgb(30,41,82);
-}
+            /* Style the navigation links */
+            .navbar a {
+                float: left;
+                display: block;
+                color: white;
+                text-align: center;
+                padding: 14px 16px;
+                text-decoration: none;
+                background-color: #0E4D92;
+            }
 
-.middle{
-  display: flex;
-  flex-direction: row;
-  justify-content: start;
-  justify-content: center;
-  align-items: center;
-  justify-content: space-between;
-  background-color: white;
-  height:80px;
-  margin-bottom: 30px;
-  z-index: 1;
-}
-.bottom{
-  display: flex;
-  flex-direction: row;
-  justify-content: end;
-  height: 25px;
-  padding-bottom: 8px;
-  margin-bottom: 3px;
-  box-shadow: 0 1.5px 1px rgba(221, 213, 213, 0.95);
+                /* Change the color of links on hover */
+                .navbar a:hover {
+                    background-color: darkgoldenrod;
+                    color: black;
+                }
 
-}
-.imageDiv{
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-}
-.dp{
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  height:79px;
-  width:auto;
-  margin-left: 140px;
-}
-.srchBox{
-  display: flex;
-  justify-content: center;
-  width: 280px;
-  margin-right: 60px;
-  align-items: center;
-}
-.searchBox{
-  border: 1.5px solid rgba(184, 178, 178,0.3);
-  height: 38px;
-  width: 250px;
-  border-radius: 20px;
-  font-size: 15px;
-  padding-left: 20px;
-  color:black;
-}
-.logo{
-  object-fit: contain;
-  width: 370px;
-}
+        /* Style the main content */
+        .main {
+            padding: 50px;
+            background-color: white;
+            width: 90%;
+        }
 
-.dv{
- display:flex;
- flex-direction: row;
- border-right: 1.3px solid rgb(203,161,53);
- width: 120px;
- justify-content: center;
- align-items: center;
+        /* Style the subtopic images */
+        .subtopic-image {
+            width: 30%;
+            height: 250px;
+        }
 
-}
+        /* Style the subtopic sections */
+        .subtopic-section {
+            display: flex;
+            align-items: inherit;
+            justify-content: space-evenly;
+            margin: 10px 0;
+        }
+        /* Style the footer */
+        .footer {
+            padding: 50px;
+            background-color: #17182b;
+            color: white;
+            width:100%;
+        }
+        /* Style the footer */
+        .footer {
+            padding: 50px;
+            background-color: #0E4D92;
+            color: white;
+            width: 100%;
+        }
 
-a{
-  color: rgb(30,41,82);
-  font-size: medium;
-  font-weight:light;
-  font-family:'Open Sans';
-  text-decoration: none;
-}
+        /* Style the newsletter */
+        .newsletter {
+            width: 50%;
+            margin: 0 auto;
+            border: 0px solid #ccc;
+            padding: 20px;
+            text-decoration-color: white;
+            flow-from: left;
+        }
 
-.dv1{
-  display:flex;
-  flex-direction: row;
-  border-right: 1.3px solid rgb(203,161,53);
-  width: 120px;
-  justify-content: center;
-  align-items: center;
-  margin-right: 79px;
-}
-a:hover{
-  cursor:pointer;
-  color:rgb(203,161,53);
-}
+            /* Style the newsletter input */
+            .newsletter input {
+                width: 80%;
+                margin: 10px 0;
+                padding: 10px;
+            }
 
+            /* Style the newsletter button */
+            .newsletter button {
+                width: 20%;
+                margin: 10px 0;
+                padding: 10px;
+                background-color: darkgoldenrod;
+                color: white;
+                border: none;
+            }
 
-  /*MAIN*/
-main{
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  height:auto;
-  margin-top: 150px;
-  text-align: start;
-  }
+        /* Style the subtopic paragraphs */
+        .subtopic-paragraph {
+            width: 60%;
+        }
 
-hr{
-  width:800px;
-  border: 1px solid rgba(30,41,82,0.5);
-  margin-top:50px;
-  margin-bottom: 30px;
-}
+    </style>
+</head>
 
-.mainTitle{
-  font-family: 'Open Sans';
-  font-weight: bold;
-  margin-top:20px;
-  font-size: 40px;
-  text-align: center;
-}
+<body>
+    <!-- Create the header with the logo -->
+    <div class="header">
+        <img src="C:\Users\saddi\OneDrive\Desktop\photo_2023-11-18_10-59-28.jpg" alt="Logo" class="logo">
+        <h1>UG| DEPARTMENT OF COMPUTER SCIENCE</h1>
+    </div>
 
-.subTitle{
-  font-family: 'Open Sans';
-  font-weight: bold;
-  font-size:30px;
-  text-align: center;
-}
-.words{
-  font-family: 'Open Sans';
-  font-size: 17-px;
-  font-weight: light;
-  margin-left:200px;
-  margin-right: 200px;
-  text-align: start;
-  width:auto;
-  line-height: 30px;
-}
+   <!-- Create the navigation bar with the tabs -->
+   <div class="navbar">
+    <a href="home.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="courses.html">Courses</a>
+    <a href="research.html">Research</a>
+    <a href="news.html">News</a>
+    <a href="lab.html">lab</a>
+    <a href="faculty.html">Faculty</a>
+    <a href="events.html">Events</a>
+    <a href="contactus.html">Contact Us</a>
+    <a href="resources.html">Resources</a>
+</div>
 
-/*IMAGES*/
-.dimg{
-  margin: auto;
-  width:600px;
-  height: 400px;
-  margin-left: 400px;
-  box-shadow: 0 0 5px rgba(0,0,0,0.7);
-}
-.himg{
+    <!-- Create the main content with the welcome message -->
+    <div class="main">
+        <p><h2>Welcome</h2></p>
+        <p>Welcome to the Department of Computer Science at the University of Ghana. We are a vibrant and diverse community of scholars, educators, and innovators who share a passion for computing and its applications. We are committed to excellence in teaching, research, and service to society.</p>
+        <p>Our department was established in 1974 as the first computer science department in Ghana and one of the earliest in Africa. Since then, we have grown to become a leading academic and research institution in the field of computing on the continent and beyond. We have produced many graduates who have made significant contributions to the development of the nation and the world.</p>
+        <!-- Create the subtopic section for Our Organization -->
+        <div class="subtopic-section">
+            <div class="subtopic-paragraph">
+                <h4>Our Organization</h4>
+                <p>The University of Ghana is one of Africa's most prominent public universities. Our impact on individuals, our region and the world is profound. whether we are launching young people into a boundless future or confronting the grand challenges of our time through dauntless research. UG educates more than 38,000students annually, with approximately 2.64% being computer science students. We turn ideas into impact and transform the world around us. For more info about our impact, visit our news site, "UG News" .
+                </div>
+            <img src="C:\Users\saddi\Downloads\austin-distel-mpN7xjKQ_Ns-unsplash.jpg" alt="Our Organization" class="subtopic-image">
+        </div>
+        <footer class="Foot-area section-gap">
+        <div class="foot area gap"></div>
+          <div class="container"><div class="row">
+            <div class="col-lg-4 col-md-6 col-sm-6">
+              <div class="single-footer-widget">
+                <h4>Academics</h4>
+                <ul>
+                  <li>
+                    <a href="/undergrad-course">Undergraduate Courses</a>
+                  </li>
+                  <li>
+                    <a href="/mphil-course">Graduate Courses(MPhil Computer Science)</a>
+                  </li>
+                  <li>
+                    <a href="/msc-course">Graduate Courses(MSc Computer Science)</a>
+                  </li>
+                  <li>
+                    <a href="/phd-course">Graduate Courses(PhD)</a>
+                  </li>
+                  <li>
+                    <a href="https://www.ug.edu.gh/academics/calendar">Academic Calendar</a>
+                  </li>
+                  <li>
+                    <a href="img/_DEPARTMENT OF COMPUTER SCIENCE, UG - 200 &amp; 300.pdf">Level 200 &amp; 300 Timetable</a>
+                  </li>
+                  <li> 
+                    <a href="img/_Placements lvl200.pdf">Placements For Level 200 Students</a>
+                  </li>
+                  <li>
+                    <a href="https://forms.gle/smoyM5M3HWaayagk7">Student Complaint Form</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="col-lg-2 col-md-6 col-sm-6">
+              <div class="single-footer-widget">
+                <h4>Admissions</h4>
+                <ul>
+                  <li>
+                    <a href="http://admission.ug.edu.gh/applying/undergraduate/overview">Undergraduate</a>
+                  </li>
+                  <li>
+                    <a href="http://admission.ug.edu.gh/applying/postgraduate/overview">Graduate</a>
+                  </li>
+                  <li>
+                    <a href="http://admission.ug.edu.gh/applying/international/overview">International Students</a>
+                  </li>
+                  <li>
+                    <a href="/entry">Entry Requirements</a>
+                  </li>
+                  <li>
+                    <a href="/contact">Contact Us</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="col-lg-2 col-md-6 col-sm-6">
+              <div class="single-footer-widget">
+                <h4>Research</h4>
+                <ul>
+                  <li>
+                    <a href="/research-dcs">Research at DCS</a>
+                  </li>
+                  <li>
+                    <a href="/research-impact">Research Impact</a>
+                  </li>
+                  <li>
+                    <a href="http://balme.ug.edu.gh/">Libraries</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="col-lg-4 col-md-6 col-sm-6">
+              <div class="single-footer-widget">
+                <h4>About The Department</h4>
+                <ul>
+                  <li>
+                    <a href="/about">Introducing DCS</a>
+                  </li>
+                  <li>
+                    <a href="/officehod">Head of Department's office</a>
+                  </li>
+                  <li>
+                    <a href="/faculty">Faculty</a>
+                  </li>
+                  <li>
+                    <a href="/events">Events</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="col-lg-4 col-md-6 col-sm-6">
+              <div class="single-footer-widget pt-10">
+                <h4>Newsletter</h4>
+                <p>Stay updated with our latest</p>
+                <div id="mc_embed_signup">
+                  <form class="validate" action="https://ug.us4.list-manage.com/subscribe/post?u=39bddf3a0774759d1db6193bf&amp;amp;id=bb816cf90d" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" target="_blank" novalidate="">
+                    <div class="input-group">
+                      <input class="form-control" type="text" name="EMAIL" placeholder="Enter Email Address" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Enter Email Address '" required="">
+                      <div class="input-group-btn">
+                        <button class="btn btn-default" type="submit">
+                        <span class="lnr lnr-arrow-right">
+                        </span>
+                      </button>
+                    </div>
+                    <div class="info">
+                    </div>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-8 col-md-6 col-sm-6">
+            <div class="single-footer-widget pt-10">
+              <h4>Contact Us </h4>
+            </div><div class="row">
+              <div class="col-lg-4">
+                <h5 class="text-white pb-10">Phone &amp; Email</h5>
+                <ul>
+                  <li>
+                    <div class="single-contact-address d-flex column">
+                      <div class="contact-details">
+                        <div class="icon">
+                          <span class="lnr lnr-phone-handset" style="margin-right:10px;color:#FFF">
+                          </span>
+                          <a style="margin-left:10px" href="tel:+233 501 382 035">
+                          </a>
+                          <span class="text text-white">+233 501 382 035</span>
+                        </div><div class="icon"><span class="lnr lnr-phone-handset" style="margin-right:10px;color:#FFF">
+                        </span>
+                        <a style="margin-left:10px" href="tel:+233 559 145 698">
+                        </a>
+                        <span class="text text-white">+233 559 145 698</span>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+                <li>
+                  <div class="contact-details">
+                    <div class="icon">
+                      <span class="lnr lnr-envelope" style="margin-right:10px;color:#FFF"></span>
+                      <a style="margin-left:10px" href="mailto:dcs@ug.edu.gh">
+                      </a>
+                      <span class="text text-white">dcs@ug.edu.gh</span>
+                    </div>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="col-lg-4"> <div class="single-footer-widget">
+              <h5 class="text-white pb-10"> Location  </h5>
+              <a href="https://www.google.com/maps/dir/5.6523661,-0.1776494/department+of+computer+science+ug/@5.6522658,-0.1857019,16z/data=!3m1!4b1!4m9!4m8!1m1!4e1!1m5!1m1!1s0xfdf9c866f97cb5d:0x847b90759758b427!2m2!1d-0.183912!2d5.6545237"></a><span class="text text-white">University Of Ghana, Legon Campus</span>
+              <p class="text-white">Opposite Mathematics Department</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom row align-items-center justify-content-between">
+      <div class="col-lg-6 col-sm-12 footer-social">
+        <a href="https://www.facebook.com/University-of-GhanaDepartment-of-Computer-Science-116786389698948/?ref=search&amp;__tn__=%2Cd%2CP-R&amp;eid=ARBBAU8wKSNVs2fNZimGERUZJeac3TbmQsaZDsz4ZoEqZ95bzGZf3siMET6V1B1NuOzqLZwhXCqqrtIt"><i class="fa fa-facebook">
+        </i>
+      </a>
+      <a href="https://twitter.com/univofghana">
+          <i class="fa fa-twitter">
+          </i>
+        </a>
+        <a href="https://www.instagram.com/explore/locations/468119891/university-of-ghana/">
+          <i class="fa fa-instagram">
+          </i>
+        </a>
+        <!-- a href="#">
+          <i class="fa fa-behance">
+        </i>
+      </a-->
+    </div>
+  </div>
+</div>
+</footer>
+        
+        <!-- Add the copyright notice -->
+        <p>Copyright © 2023 All rights reserved.</p>
+    </div>
 
-  width:980px;
-  height: 300px;
-  box-shadow: 0 0 5px rgba(0,0,0,0.7);
-}
-.subTitle1{
-  font-family: 'Open Sans';
-  font-weight: bold;
-  font-size:25px;
-
-}
-
-.words1{
-  margin-top: 8px;
-  font-family: 'Open Sans';
-  font-size: 16px;
-  font-weight: light;
-  text-align: start;
-  width: 600px;
-  line-height: 30px;
-}
-
- /*FOOTER*/
-footer{
-      display: flex;
-      flex-direction: column;
-      margin-top: 60px;
-      height: auto;
-      box-shadow: 0 0 3px rgba(0,0,0,0.5);
-      border-radius: 3px;
-  }
-
-  .footContUp{
-      display: flex;
-      flex-direction: row;
-      justify-content: start;
-      align-items: center;
-
-      height: 400px;
-      background-color: rgba(203,161,53,0.1);    
-
-      .fp{
-          line-height: 10px;
-          font-family:'Open Sans';
-          font-size:small;
-          text-align: start;
-          transition: 0.3;
-
-
-      }
-      .H3{
-          font-family: 'Open Sans';
-          font-weight: bold;
-          font-size: x-large;
-          margin-left: 30px;
-      }
-
-      .fp:hover{
-          cursor: pointer;
-          color: rgb(203,161,53);
-          transition: 0.4s;
-         }
-
-      .fd{
-          border-right:1px solid rgba(30,41,82,0.5);
-          width:313px;
-          height: 200px;
-          color: rgb(30,41,82);
-      }
-      .fd1{
-          border:none;
-          width:313px;
-          height: 200px;
-          color: rgb(30,41,82);
-      }
-      .fimage{
-          position: relative;
-          width:190px;
-          height: 390px;
-          vertical-align: bottom;
-          margin-top: 10px;
-      }
-
-  }
-  .footContLow{
-      display: flex;
-      flex-direction: row;
-      height: 100px;
-      background-color: rgb(30,41,82);
-      justify-content: center;
-      align-items: center;
-      padding-left: 250px;
-      box-shadow: 0 0 3px rgba(0,0,0,0.5);
-      border-radius: 5px;
-
-      .lowp{
-          font-family: 'Open Sans';
-          font-size: medium;
-          font-weight: medium;
-          color: rgb(203,161,53);  
-      }
-  }
+  </body>
+</html>
